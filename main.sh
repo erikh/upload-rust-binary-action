@@ -102,7 +102,7 @@ fi
 
 "${cargo}" build "${build_options[@]}"
 
-pushd target/"${target}"/release >/dev/null
+pushd "target/${target}/release" >/dev/null
 archive="${archive/\$bin/${package}}"
 archive="${archive/\$target/${target}}"
 archive="${archive/\$tag/${tag}}"
